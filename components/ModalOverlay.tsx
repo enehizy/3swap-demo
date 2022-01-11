@@ -59,7 +59,7 @@ export default function ModalOverlay({children,show}:props){
   if(mounted){
       return (
           createPortal(<Overlay show={show} >{children}</Overlay>,
-            document.getElementById('modals'))
+            document.getElementById('modals') as Element) 
       )
       
   }
