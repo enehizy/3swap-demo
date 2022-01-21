@@ -1,17 +1,17 @@
 import { Listbox } from "@headlessui/react"
 import { useState } from "react"
-import TokenSelector from './TokenSelector';
-import Token from './TokenSelector/token'
+import TokenSelector from  './TokenSelector';
 import TokenList from '../TokenList.json';
+import Token from './TokenSelector/Token';
 
-// const tokenList=['eth','bnb','cake','tron','sol']
+
 const tokenList=TokenList.tokenList;
 type tList={
    address:string,
    symbol:string,
    logoURI:string
 }
-
+ 
 export default function ListBoxButton() {
     const [selected,setSelected] =useState<tList|null>(null);
     return (
